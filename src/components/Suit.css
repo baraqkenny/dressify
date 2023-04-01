@@ -1,0 +1,13 @@
+.suit {
+  margin-left: 2rem;
+}
+
+.suit-btn {
+  padding: 10px 50px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 2px solid;
+  box-shadow: 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}

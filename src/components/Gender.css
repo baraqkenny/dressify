@@ -1,0 +1,11 @@
+.gender {
+  margin-top: 2rem;
+  
+}
+
+.gender-btn {
+  display: flex;
+  margin-left: 0.5rem;
+  padding: 10px 15px;
+}
+
