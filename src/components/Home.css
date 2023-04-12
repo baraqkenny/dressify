@@ -1,0 +1,26 @@
+ .logo{
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul .link{
+    list-style: none;
+    margin: 2.5rem;
+    padding-right: 2rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}

@@ -1,20 +1,20 @@
-import {useState} from 'react';
+import { useState } from 'react';
+import MaleDressInput from './MaleDressInput';
+import FemaleDressInput from './FemaleDressInput';
 import './Gender.css';
-import MaleNativeDressInput from "../dressInput/MaleNativeDressInput";
 
 const Gender = () => {
-  const [showMaleInput, setShowMaleInput] = useState(false);
-
+    const [maleDress, setMaleDress] = useState(false);
+    const [femaleDress, setFemaleDress] = useState(false);
 
   return (
-    <div className="gender">
-      {/* toggle the gen */}
-      <button
-        onClick={() => setShowMaleInput(!showMaleInput)}
-        className="gender-btn male"
-      >male</button>
-      <div>{showMaleInput && <MaleNativeDressInput />}</div>
-      <button className="gender-btn female">female</button>
+    <div className='gender-wrapper'>
+      <button onClick={()=> setMaleDress(!maleDress)} className="male-gender">male</button>
+    {maleDress && <div className='male-dress'><MaleDressInput /></div>}
+
+      <button onClick={()=> setFemaleDress
+    (!femaleDress)} className="female-gender">female</button>
+    {femaleDress && <div className='female-dress'><FemaleDressInput/></div>}
     </div>
   );
 }

@@ -1,25 +1,26 @@
-import {createContext, useState} from 'react';
+import React from 'react';
 import './App.css';
-import Buttons from './components/Buttons';
-import Gender from './components/Gender';
+import Home from './components/Home';
+import All from './components/All';
+import Completed from './components/Completed';
+import Pending from './components/Pending';
+import { Routes, Route} from 'react-router-dom';
 
 
-
-export const GenderContext = createContext();
 
 function App() {
-  const [header] = useState('Dressify')
-
 
   return (
-     <GenderContext.Provider value={<Gender />}>
-    <div className="app">
-      <h1>{header}</h1>
-      <hr />
-      <Buttons />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/pending" element={<Pending />} />
+        <Route path="/completed" element={<Completed />}/>
+      </Routes>
       </div>
-      </GenderContext.Provider>
-  )
+   
+  );
 
 } 
 
